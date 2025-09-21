@@ -8,16 +8,9 @@
   </style>
 </head>
 <body>
-  <p id="clockText">Server time snippet: loading…</p>
-  <script>
-    function updateClock() {
-      const now = new Date();
-      const timeStr = now.toLocaleTimeString("en-US", { hour12: true });
-      document.getElementById("clockText").textContent =
-        "Server time snippet: " + timeStr + " ET";
-    }
-    setInterval(updateClock, 1000);
-    updateClock();
-  </script>
+  <p id="clockText">
+    Server time snippet: 06:09:33 PM ET
+  </p>
 </body>
 </html>
+
