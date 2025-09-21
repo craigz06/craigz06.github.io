@@ -2,8 +2,8 @@ name: Update Clock
 
 on:
   schedule:
-    - cron: "*/5 * * * *"   # runs every 5 minutes
-  workflow_dispatch:        # lets you run it manually
+    - cron: "*/5 * * * *"   # every 5 minutes
+  workflow_dispatch:        # allows manual trigger
 
 jobs:
   build:
