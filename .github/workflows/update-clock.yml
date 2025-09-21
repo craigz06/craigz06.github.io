@@ -3,7 +3,7 @@ name: Update Clock
 on:
   schedule:
     - cron: "*/5 * * * *"   # runs every 5 minutes
-  workflow_dispatch:        # lets you trigger manually
+  workflow_dispatch:        # lets you run it manually
 
 jobs:
   build:
@@ -33,6 +33,5 @@ jobs:
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add clock.html
-          git commit -m "Update clock"
+          git commit -m "Update clock" || echo "No changes to commit"
           git push
-
