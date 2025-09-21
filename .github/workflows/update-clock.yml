@@ -3,7 +3,10 @@ name: Update Clock
 on:
   schedule:
     - cron: "*/5 * * * *"   # every 5 minutes
-  workflow_dispatch:        # manual trigger
+  workflow_dispatch:
+
+permissions:
+  contents: write   # allow workflow to push to repo
 
 jobs:
   build:
@@ -14,7 +17,15 @@ jobs:
       - name: Update clock.html
         run: |
           TIME=$(TZ="America/New_York" date +"%I:%M:%S %p ET")
-          echo "<!DOCTYPE html><html><head><meta charset='UTF-8'><title>Clock</title></head><body><p id='clockText'>Server time snippet: $TIME</p></body></html>" > clock.html
+          cat > clock.html <<EOF
+          <!DOCTYPE html>
+          <html lang="en">
+          <head><meta charset="UTF-8"><title>Clock</title></head>
+          <body style="font-family:monospace;background:#000;color:#0ff;text-align:center;padding-top:20%;">
+            <p id="clockText">Server time snippet: $TIME</p>
+          </body>
+          </html>
+          EOF
 
       - name: Commit changes
         run: |
