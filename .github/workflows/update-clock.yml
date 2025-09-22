@@ -2,7 +2,7 @@ name: Update Clock
 
 on:
   schedule:
-    - cron: "*/2 * * * *"   # runs every 2 minutes
+    - cron: "*/5 * * * *"   # runs every 5 minutes
   workflow_dispatch:
 
 jobs:
@@ -14,14 +14,17 @@ jobs:
       - name: Update clock.html
         run: |
           date_str=$(TZ="America/New_York" date +"%I:%M:%S %p ET")
-          nonce=$(date +%s) # unique timestamp for cache busting
-          echo "<!DOCTYPE html><html><head><meta charset='UTF-8'><title>Clock</title></head><body><p id='clockText'>Server time snippet: $date_str</p><!-- $nonce --></body></html>" > clock.html
+          nonce=$(date +%s) # unique build ID
+          echo "<!DOCTYPE html><html><head><meta charset='UTF-8'><title>Clock</title></head><body><p>Server time snippet: $date_str</p><p>Build ID: $nonce</p></body></html>" > clock.html
 
       - name: Commit changes
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add clock.html
-          git commit -m "Update Clock $(date)"
-          git push
-
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update Clock $(date)"
+            git push origin HEAD:main
+          fi
