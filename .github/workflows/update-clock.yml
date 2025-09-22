@@ -4,8 +4,7 @@ on:
   schedule:
     - cron: "*/2 * * * *"   # every 2 minutes
   workflow_dispatch:
-permissions:
-  contents: write 
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -15,13 +14,14 @@ jobs:
       - name: Update clock.html
         run: |
           date_str=$(TZ="America/New_York" date +"%I:%M:%S %p ET")
-          echo "<!DOCTYPE html><html><head><meta charset='UTF-8'><title>Clock</title></head><body style='font-family:monospace;background:black;color:#00ffcc;text-align:center;padding-top:20%;'>Server time snippet: $date_str</body></html>" > clock.html
+          nonce=$(date +%s)  # unique value each run
+          echo "<!DOCTYPE html><html><head><meta charset='UTF-8'><title>Clock</title></head><body style='font-family:monospace;background:#000;color:#0f0;text-align:center;padding-top:20px;'><p id='clockText'>Server time snippet: $date_str</p><!-- $nonce --></body></html>" > clock.html
 
-      - name: Commit changes
+      - name: Commit and push changes
         run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "actions@github.com"
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
           git add clock.html
-          git commit -m "Update clock" || echo "No changes to commit"
-          git push origin HEAD:main
+          git commit -m "Update clock.html [skip ci]" || echo "No changes to commit"
+          git push
 
