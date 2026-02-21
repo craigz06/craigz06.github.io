@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  /* Your custom CSS styles here */
+body {
+    font-family: "Times", sans-serif;
+    font-weight: 400;
+    background-color: lightgoldenrodyellow;
+    color: black;
+    margin: 10px;
+    padding: 10px;
+    background-image: url('assets/images/ai.human background.jpg');
+    position: relative; /* This is important for the pseudo-element to work properly */
+}
+
+/* Adding a pseudo-element to overlay a dark translucent shade */
+body::before {
+    content: ""; /* Required for the pseudo-element to be generated */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* The last value is the opacity, can adjust to your liking */
+    pointer-events: none; /* Ensures it won't interfere with clicking */
+    z-index: -1; /* Sends it behind the content but on top of the background image */
+}
+
+.container {
+    text-align: center; /* This ensures all children inside the container are centered */
+}
+
+h1, h2 {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    display: inline-block; 
+    border-radius: 44px;
+    text-align: center; 
+}
+
+h1 {
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 5px;
+    color: white;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 1px;
+}
+
+
+
+
+    
+  /* Set a maximum width for the "forebears-image" class */
+.forebears-image {
+  max-width: 200px; /* Adjust the width as needed */
+  width: 100%; /* Ensure the image scales down while maintaining aspect ratio */
+}
+  
+ 
+    
+  .column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 5in;
+    padding: 10px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+
+  /* Add a shadow to the images */
+  img {
+    width: 100%;
+    max-height: auto;
+    box-shadow: 0 18px 14px rgba(0, 0, 0, 0.2);
+  }
+.button-image-link {
+    display: block;
+    text-align: center; /* This will center inline-block or inline-level children */
+    margin: 10px 0; /* Adds vertical spacing */
+}
+
+.button-image {
+    width: 50%;
+    height: auto;
+    display: inline-block; /* Ensures the image respects the text-align from its parent */
+}
+
+}
+ 
+    
+    
+ /* Increase specificity for the :hover effect */
+  .story-card:hover {
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  .text-block {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .text-block p {
+    font-size: 16px;
+  }
+
+  footer {
+    background-color: grey;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+    
+    
+.intro {
+    display: block; /* This changes it from a grid to a standard block layout */
+    padding: 20px;
+    background-color: lavenderblush;
+}
+
+
+
+  .intro h1 {
+    grid-column: 1 / -1;
+  }
+
+  .intro-desc {
+    padding: 20 115px;
+  }
+    
+
+  .collections {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .collection-desc {
+    flex-basis: 48%;
+  }
+    
+    
+    
+    
+    
+    
+    
+</style>
+</head>
+
+<body onload="updateImage()">
+
+<div class="container">
+  <div class="column">
+    <div class="image-container">
+      <a href="Storiesindex.html"><img class="forebears-image" src="./marketing/Dalle-3/conjecture.png"  alt="craig's conjectures"></a>
+    </div>
+  </div>
+</div>
+
+   <center><h1> Craig's Conjectures</h1></center>
+
+    <br>
+ 
+<a href="renai.html" class="button-image-link">
+    <img class="button-image" src="./marketing/Dalle-3/triad.png" alt="Renaissance Legacy Arks">
+</a>
+
+    <div class="container"><br>
+        
+    <h2>"In the dawn of our species, on the savannas of ancient Earth, locality was not just a concept; it was a matter of life and death. The rustle in the bushes, the snap of a twig—these were immediate signals that demanded immediate responses. A tiger lurking nearby was not an abstract threat but a palpable danger, and the closer the tiger, the more urgent the need for action. Our survival depended on our understanding of locality, of the here and now, and our senses evolved to be exquisitely tuned to our immediate surroundings.
+
+As we ventured from the caves to the cosmos, our understanding of locality underwent profound transformations. Sir Isaac Newton's equations of gravity, for instance, presented us with a paradox: they implied action at a distance, instantaneously affecting objects no matter how far apart they were in the universe. This notion was deeply unsettling, for it defied our intuitive understanding of locality. It took the genius of Albert Einstein to resolve this paradox. In his theory of General Relativity, Einstein introduced us to the concept of gravity as a curvature in the fabric of spacetime, propagated through gravitational waves traveling at the speed of light. Suddenly, the universe was local again, bound by the cosmic speed limit set by light itself.
+
+Yet, just as we were becoming comfortable with this notion, quantum mechanics burst onto the scene, challenging our understanding of locality in even more fundamental ways. Quantum entanglement, that 'spooky action at a distance' as Einstein once called it, defies our classical intuition by allowing particles to be instantaneously connected, regardless of the distance separating them. This quantum form of communication, transcending the speed of light, forces us to reconsider our deeply ingrained belief in locality, and opens the door to a universe far stranger and more interconnected than we ever imagined.
+
+In this cosmic journey, from the tigers lurking in the ancient bushes to the entangled particles of the quantum realm, we find that our understanding of locality has been continually reshaped by the boundaries of our knowledge. And as we push these boundaries further, who knows what other profound transformations await us in our quest to understand the universe and our place in it."
+
+
+
+"As we stand on the precipice of the 21st century, our tools for exploring the universe have grown exponentially more sophisticated. We've moved from telescopes that scan the heavens to particle accelerators that probe the very building blocks of matter. Yet, the more we learn, the more we realize how much there is still to discover. The concept of locality is undergoing yet another revolution, this time at the intersection of quantum mechanics and cosmology. Theories like quantum gravity and string theory are pushing us to reconsider the very fabric of spacetime itself. Could it be that our universe is but one in a 'multiverse,' a collection of universes, each with its own laws and constants? If so, what does 'locality' mean in such a grand tapestry?
+
+Moreover, the emerging field of quantum computing promises to harness the power of quantum entanglement for practical applications. Imagine a world where information can be transmitted instantaneously, not through wires or signals, but through the mysterious channels of quantum entanglement. This would be a form of communication that transcends our traditional understanding of space and time, making the universe a much 'smaller' and more interconnected place than we ever thought possible.
+
+And let's not forget the tantalizing possibility of life elsewhere in the universe. If we were to make contact with an extraterrestrial intelligence, how would our notions of locality adapt to incorporate these new cosmic neighbors? Could advanced civilizations have already mastered forms of communication that make a mockery of our primitive understanding of locality?
+
+In each era of human history, our concept of what is 'local' and what is 'distant' has expanded, from the immediate surroundings of our ancestral caves to the farthest reaches of the observable universe. And as we continue to push the boundaries of our knowledge, we can be certain that our understanding of locality will continue to evolve in ways we can scarcely imagine. For in the grand cosmic journey, the only constant is change </h2>
+    
+</div>
+
+    
+
+
+<br><br><br><br><br><br><br><br>
+
+
+   
+
+
+
+  <footer>
+       ver. 1.31 Copyright (c) 2023 Cline -Ward LLC.<br>created in concert with GPT-4 and DALL-E by OpenAI
+  </footer>
+</body>
+</html>

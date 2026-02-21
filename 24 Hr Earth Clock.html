@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function updateImage() {
+  var image = document.getElementById("myImage");
+  var currentTime = new Date();
+  var currentHour = currentTime.getHours();
+  var imageHour = ("0" + currentHour).slice(-2); // Format as two digits
+  
+  var imagePath = "file:///Volumes/WD%20Elements%20Storage/Earth%20Clock%20Program/" + imageHour + ".00.jpg";
+  image.src = imagePath;
+}
+
+// Update image every hour (in milliseconds)
+setInterval(updateImage, 3600000);
+</script>
+</head>
+<body>
+  <input type="time" id="timeInput" onchange="updateImage()">
+  <img id="myImage" src="" alt="Image">
+</body>
+</html>
