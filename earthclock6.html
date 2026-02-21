@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    font-family: Helvetica, Arial, sans-serif; /* Change font to Helvetica */
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #currentTime {
+    position: fixed;
+    bottom: 15px; /* Move up 5 pixels */
+    left: 25px; /* Move left 25 pixels */
+    font-size: 18px;
+    color: white;
+  }
+</style>
+</head>
+<body onload="updateImage(); updateTimeDisplay()">
+  <img id="myImage" src="" alt="Image">
+  <div id="currentTime"></div>
+
+  <script>
+    function updateImage() {
+      var image = document.getElementById("myImage");
+      var currentTime = new Date();
+      var currentHour = ("0" + currentTime.getHours()).slice(-2);
+      var imagePath = currentHour + ".00.jpg";
+      image.src = imagePath;
+    }
+
+    function updateTimeDisplay() {
+      var currentTime = new Date();
+      var hours = ("0" + currentTime.getHours()).slice(-2);
+      var minutes = ("0" + currentTime.getMinutes()).slice(-2);
+      var timeString = hours + ":" + minutes;
+      var timeElement = document.getElementById("currentTime");
+      timeElement.textContent = "Current Time: " + timeString;
+      setTimeout(updateTimeDisplay, 60000);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  /* Your custom CSS styles here */
+  body {
+    font-family: "Cormorant Garamond", sans-serif;
+    font-weight: 400;
+    background-image: linear-gradient(to bottom, #F7DC6F , #AED6F1 );
+    color: black;
+    margin: 10px;
+    padding: 10px;
+}
+
+  h1 {
+    text-align: center; /* Center the text */
+    padding: 20px 0;
+  }
+
+  h2 {
+    text-align: left;
+    margin-top: 10px;
+  }
+
+  h3 {
+    text-align: center;
+    margin-top: 1px;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 0px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+    
+  /* Set a maximum width for the "forebears-image" class */
+.forebears-image {
+  max-width: 300px; /* Adjust the width as needed */
+  width: 100%; /* Ensure the image scales down while maintaining aspect ratio */
+}
+  
+ 
+    
+  .column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-container {
+    max-width: 6in;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  /* Add a shadow to the images */
+  img {
+    width: 100%;
+    max-height: auto;
+    box-shadow: 0 18px 14px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Increase specificity for the :hover effect */
+  .story-card:hover {
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  .text-block {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .text-block p {
+    font-size: 16px;
+  }
+
+       .earthclock-logo {
+    width: 250px;  /* Or whatever width you desire */
+    height: auto;  /* Maintain aspect ratio */
+}
+    
+    
+    
+    .spotify-logo {
+    width: 250px;  /* Or whatever width you desire */
+    height: auto;  /* Maintain aspect ratio */
+}
+    
+    
+  footer {
+    background-color: grey;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+</style>
+</head>
+
+<body onload="updateImage()">
+
+ 
+
+<div class="container">
+  <div class="column">
+    <div class="image-container">
+      <p></p>
+      <!-- Add a class to the image for styling -->
+      <a href="index-two%20ark%20catagory.html"><img class="forebears-image" src="assets/images/forebears-bw-logo.jpg" alt="Image 1"></a>
+    </div>
+    <div class="text-block">
+      <p> </p>
+    </div>
+  </div>
+</div>
+
+
+  <div class="container">
+    <div class="column">
+      <div class="image-container">
+        <a href="index-cline-ward.html"><img src="clinehistory.png" alt="Image 1"></a>
+      </div>
+      <div class="text-block">
+        <p> </p>
+      </div>
+    </div>
+
+       <div class="column">
+      <div class="image-container">
+        <a href="Storiesindex.html"><img src="livescaigliz.png" alt="Image 4"></a>
+      </div>
+      <div class="text-block">
+        <p> </p>
+      </div>
+    </div>  
+      </div>
+          <div class="column">
+      <div class="image-container">
+        <a href="index%281%29.html"><img class= "earthclock-logo"  src="Earthclocklogo.jpg" alt="Image 2"></a>
+      </div>
+      <div class="text-block">
+        <p></p>
+      </div>
+    </div>
+  
+      
+      
+        <div class="container">
+    <div class="column">
+      <div class="image-container">
+       <a href="https://open.spotify.com/"><img class="spotify-logo" src="Spotifylogo.jpg" alt="Image 3"></a>
+
+      </div>
+      <div class="text-block">
+        <p> </p>
+      </div>
+    </div>
+           </div>
+      
+
+
+
+
+
+
+  <footer>
+    ver. 1.35 Copyright (c) 2023 Cline -Ward LLC.<br>created in concert with GPT-4 and DALL-E by OpenAI<br>"Even AI agrees: This page is state-of-the-art!"
+  </footer>
+</body>
+</html>

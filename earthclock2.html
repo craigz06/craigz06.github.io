@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+</head>
+<body onload="updateImage()">
+  <img id="myImage" src="" alt="Image">
+
+  <script>
+    function updateImage() {
+      var image = document.getElementById("myImage");
+      var currentTime = new Date();
+      var currentHour = ("0" + currentTime.getHours()).slice(-2);
+      var imagePath = currentHour + ".00.jpg";
+      image.src = imagePath;
+    }
+  </script>
+</body>
+</html>

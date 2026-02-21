@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  /* Your custom CSS styles here */
+  body {
+    font-family: "Times", sans-serif;
+    font-weight: 400;
+    background-color: antiquewhite;
+    color: black;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  h1 {
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  h2 {
+    text-align: left;
+    margin-top: 10px;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px; /* Adjusted margin for better spacing */
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .column {
+    flex: 1; /* Each column takes up half of the container width */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally within the column */
+  }
+
+  .image-container {
+    max-width: 6in; /* Adjusted to 3 inches for image width */
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  img {
+    width: 100%;
+    max-height: auto;
+  }
+
+  .text-block {
+    flex: 1;
+    padding: 10px; /* Adjusted padding for better spacing */
+    box-sizing: border-box;
+  }
+
+  .text-block p {
+    font-size: 16px;
+  }
+  
+  footer {
+    background-color: grey;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+</style>
+</head>
+<body onload="updateImage()">
+  <h1>Forebears Menu ver. 1.20</h1>
+  <div class="container">
+    <div class="column">
+      <div class="image-container">
+        <a href="index-.html"><img src="assets/images/forebears-bw-logo.jpg" alt="Image 1"></a>
+      </div>
+      <div class="text-block">
+        <p>Cline Family History</p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="image-container">
+        <a href="index%281%29.html"><img src="17.00.jpg" alt="Image 2"></a>
+      </div>
+      <div class="text-block">
+        <p>Earth Clock</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="column">
+      <div class="image-container">
+        <a href="https://open.spotify.com/"><img src="assets/images/screen-shot-2023-08-13-at-5.09.29-pm.png" alt="Image 3">
+      </div>
+      <div class="text-block">
+        <p> </p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="image-container">
+        <a href="AStories.html"><img src="Stories%20logo.jpg" alt="Image 4"></a>
+      </div>
+      <div class="text-block">
+        <p> </p>
+      </div>
+    </div>
+  </div>
+  <footer>
+    Copyright (c) 2023 Cline -Ward LLC.
+  </footer>
+</body>
+</html>

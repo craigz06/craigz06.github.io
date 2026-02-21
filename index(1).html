@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  /* Your CSS styles here */
+</style>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">  
+   <meta name="description" content="Experience the Forebears Earth Clock, a unique digital timepiece that displays stunning images of the Earth's landscapes corresponding to each hour of the day. Stay connected with history through the Forebears Family History Program 1.1, bringing you a visual journey through time.">
+
+<title>Index</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:700,400&amp;subset=cyrillic,latin,greek,vietnamese">
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/mobirise/css/style.css">
+<link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css">
+<link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<script>
+  function updateImage() {
+    var image = document.getElementById("myImage");
+    var currentTime = new Date();
+    var currentHour = ("0" + currentTime.getHours()).slice(-2);
+    var imagePath = currentHour + ".00.jpg";
+    image.src = imagePath;
+  }
+
+  function updateTimeDisplay() {
+    var currentTime = new Date();
+    var hours = currentTime.getHours();
+    var period = "AM";
+    if (hours >= 12) {
+      period = "PM";
+      if (hours > 12) {
+        hours -= 12;
+      }
+    }
+    if (hours === 0) {
+      hours = 12;
+    }
+    var minutes = ("0" + currentTime.getMinutes()).slice(-2);
+    var timeString = hours + ":" + minutes + " " + period;
+    var timeElement = document.getElementById("currentTime");
+    timeElement.textContent = "Current Time: " + timeString;
+  }
+
+  function goToMainMenu() {
+    window.location.href = "index.html";
+  }
+
+  // Call updateImage() and updateTimeDisplay() when the page loads
+  window.onload = function() {
+    updateImage();
+    updateTimeDisplay();
+  };
+
+  // Refresh image on the hour using setInterval()
+  setInterval(function() {
+    updateImage();
+  }, 3600000); // Refresh every 3600000 milliseconds (1 hour)
+
+  // Request full screen when the page is fully loaded
+  document.addEventListener("DOMContentLoaded", function() {
+    var elem = document.documentElement;
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.mozRequestFullScreen) { /* Firefox */
+      elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+      elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { /* IE/Edge */
+      elem.msRequestFullscreen();
+    }
+  });
+</script>
+</head>
+<body>
+  <img id="myImage" src="" alt="Image">
+  <div id=""></div>
+  <div id="forebearsText">Forebears Earth Clock ver 8.29.23</div>
+  <button id="mainMenuButton" onclick="goToMainMenu()">Main Menu</button>
+</body>
+</html>
