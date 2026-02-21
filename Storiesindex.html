@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lives of Craig and Liz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: antiquewhite;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+        h1 {
+            margin: 0; /* Corrected margin value */
+            padding: 30px;
+        }
+     .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+   grid-gap: 1em;
+          padding: 70px;  /* adjust value to your preference */
+
+}
+
+.video-container video {
+    width: 40%;  /* or whatever percentage or pixel value you desire */
+    height: auto;
+}
+
+
+
+.story-card {
+    flex: 0 0 calc(33.333% - 1em); /* New */
+    margin: 0.5em; /* New */
+    padding: 20px;
+    border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.4
+    s ease;
+}
+
+
+
+    .story-card:hover {
+        background-color: rgba(255, 255, 255, 1); /* Solid white on hover */
+    }
+
+    .story-card img {
+         max-width: 120px; /* This ensures the image doesn't overflow the card's width */
+    max-height: 50%; /* This will ensure the image takes up no more than half the card's height */
+    display: block; /* This will remove any unwanted space below the image */
+    margin: 0 auto; /* This will center the image if it's narrower than the card's width */
+}
+    }
+    </style>
+</head>
+<body>
+<a href="index.html">
+    <img src="./assets/images/forebears-bw-logo-367x128.jpg" alt="Forebears Logo">
+
+
+    <p>-</p>
+    <header>
+        
+        <h1>The Lives of Craig and Liz</h1>
+    </header>
+<br>
+    </a>
+    
+    
+    
+<div class="video-container">
+    <video controls>
+        <source src="stories/videos/craigliz.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+    
+<div class="container">
+    <!-- Stevie -->
+    <div class="story-card">
+        <img src="./assets/images/steph-hat-600x799.jpeg" alt="Image of Stevie and Ross">
+        
+     
+        <a href="stories/story1.html"><h2>Craig's Daughter Stevie</h2></a>
+           <p>The MacLeods - Stevie and Ross</p>
+    </div>
+
+
+        <!-- Ally -->
+        <div class="story-card">
+             <img src="./assets/images/ally-headshot-600x800.jpeg" alt="Image of Stevie and Ross">
+             <a href="stories/story2.html">  <h2>Craig's Daughter Ally</h2></a>
+          
+            <p>The Beechners - Ally, Paul, Lucas, Arianna and Everly</p>
+           
+        </div>
+    <!--Maria -->
+        <div class="story-card">
+             
+            
+            <img src="./assets/images/mari-wedding-560x651-560x651.jpg" alt="Image of Maria Steenland">
+            
+           
+           
+            <a href="stories/story3.html"> <h2>Liz's Daughter Maria</h2></a>
+             <p>Maria, Daniel, Alba</p>
+        </div>
+
+        <!-- Nick -->
+        <div class="story-card">
+             <img src="./assets/images/nick-mandy-600x450.jpeg" alt="Image of Nick Steenland">
+            
+            <a href="stories/story4.html"><h2>Liz's Son Nick</h2></a>
+            <p>Nick and Amanda</p>
+        </div>     
+        
+        <!-- Story 5 -->
+        <div class="story-card">
+           <img src="./assets/images/rose-toby.JPG" alt="Image of Stevie and Ross">
+            <h2>Our Dogs</h2>
+            
+            <p>Toby, Rose, Obi-wan</p>
+            <a href="stories/story5.html">Read More</a>
+        </div>
+
+        <!-- Story 6 -->
+        <div class="story-card">
+            <img src="./assets/images/rosemary2023.jpg" alt="Image of Stevie and Ross">
+            <h2>Our Properties</h2>
+            <p>Rosemary, Three Bears,Elizabeth, Sunset Bluffs</p>
+            <a href="stories/story6.html">Read More</a>
+        </div>
+
+        <!-- Story 7 -->
+        <div class="story-card">
+           <img src="./assets/images/NYC Skyline.png" alt="Image of Stevie and Ross">
+            <h2>Our Trips</h2>
+            <p>New York, Atlanta, Flordia, Boston</p>
+            <a href="stories/story7.html">Read More</a>
+        </div>
+
+        <!-- Story 6 -->
+        <div class="story-card">
+              <img src="./assets/images/CV.png" alt="Image of Stevie and Ross">
+            <h2>Our CVs</h2>
+            <p>Liz and Craig</p>
+            <a href="stories/story6.html">Read More</a>
+        </div>
+
+        <!-- Conjecture -->
+        <div class="story-card">
+            <img src="./stories/images/TYPE2.DYSON SPHERE.png" alt="Craig Cline AI, CETI-C">
+            <h2>Craig's Conjectures</h2>
+            <p>Artficial Capable Intelligence, CETi-C</p>
+            <a href="./marketing/Dalle-3/CETi-C/CETI.html">Read More</a>
+        </div>
+
+        <!-- Stained Glass -->
+        <div class="story-card">
+            <img src="./assets/images/800px-percy-cottage-rugby-tn1-800x471-21.jpg" alt="Image of Stevie and Ross">
+            <h2>Our Stained Glass</h2>
+            <p>Antique and Homemade Pieces </p>
+            <a href="stories/story8.html">Read More</a>
+        </div>
+
+</div>
+        
+
+</body>
+</html>
